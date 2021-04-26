@@ -1,0 +1,12 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: provider
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka  #如果是单节点配置一个,多节点就配置多个
+  instance:
+    prefer-ip-address: true   #服务从getHostName中获取地址名称时,获取的是ip,而不是hostName
+    ip-address: 127.0.0.1 #如果不设置,就自动查找,
